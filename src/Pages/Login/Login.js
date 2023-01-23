@@ -65,8 +65,7 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-32">
-            <h1>Login</h1>
+        <div className="">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
                     <div className="">

@@ -102,7 +102,7 @@ const Signup = () => {
     }
 
     return (
-        <div className='lg:flex md:flex-row flex-col lg:justify-evenly mt-24 mx-auto'>
+        <div className='lg:flex md:flex-row flex-col lg:justify-evenly mx-auto'>
             <div>
                 <img className='h-[450px]' src="https://i.ibb.co/XxqDcj2/Mobile-login-pana.png" alt="" />
             </div>
@@ -136,15 +136,6 @@ const Signup = () => {
                                     <span className='position: absolute right-3 top-2' onClick={handleToggle}><Icon icon={icon} size={25} /></span>
                                     {errors.password && <p className='text-red-600'>{errors.password.message}</p>}
                                 </div>
-                            </div>
-                            <div className="form-control w-full max-w-xs">
-                                <label className="label"> <span className="label-text">Confirm Password</span></label>
-                                <input {...register("confirmPassword", {
-                                    required: 'Password is required',
-                                    minLength: { value: 6, message: 'Password must be 6 character long' },
-                                    pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must have uppercase special character and number' }
-                                })} className="input input-bordered w-full max-w-xs" type="password" />
-                                {errors.password && <p className='text-red-600'>{errors.password.message}</p>}
                             </div>
                             <input className='btn btn-info w-full mt-6 text-white' value="Sign Up" type="submit" />
                             {signUpError && <p className='text-red-600'> {signUpError}</p>}
