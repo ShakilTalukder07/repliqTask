@@ -15,8 +15,10 @@
     "react-icon": "^1.0.0",
     "react-icons": "^4.7.1",
     "react-icons-kit": "^2.0.0",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
+    "swiper": "^8.4.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
