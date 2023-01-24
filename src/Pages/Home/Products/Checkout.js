@@ -8,7 +8,7 @@ const Checkout = () => {
     const items = useLoaderData()
     const { loading, user } = useContext(AuthContext)
 
-    console.log(user);
+    // console.log(user);
 
     const { image, name, seller_name, price } = items
 
@@ -24,7 +24,7 @@ const Checkout = () => {
         const price = form.price.value;
         const email = user?.email || 'Unregistered'
         const description = form.description.value;
-        console.log(title, price, email, description);
+        // console.log(title, price, email, description);
 
         const totalServices = {
             serviceName: title,
@@ -55,7 +55,7 @@ const Checkout = () => {
         <form onSubmit={handleSubmit}>
             <div className='grid mx-auto w-[450px] my-12 shadow-xl p-14 gap-4'>
 
-                <img src={image} alt="" />
+                <img className='w-full h-40' src={image} alt="" />
                 <input name='title' type="text" placeholder="Title" defaultValue={name} className="input input-bordered w-full  bg-gray-900 text-red-100" readOnly />
 
                 <input name='price' type="number" placeholder="Price" defaultValue={price} className="input input-bordered w-full  bg-gray-900 text-red-100" readOnly />
