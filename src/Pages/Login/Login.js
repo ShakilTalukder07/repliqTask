@@ -85,7 +85,7 @@ const Login = () => {
                             <button type="submit" className="btn bg-[#0EA5E9] border-none hover:bg-[#0EA5E9]">Login</button>
                             <button onClick={handleGoogle} type="submit" className="btn  border text-gray-800 bg-gray-50 border-sky-500 hover:bg-white">Sign In with <FcGoogle className="ml-4 text-2xl"></FcGoogle></button>
                             <div>
-                                <p className="text-sm capitalize text-center">new to eventMart? <Link href='/signup' className="text-[#0EA5E9]">sign up</Link> </p>
+                                <p className="text-sm capitalize text-center">new to eventMart? <Link to='/signup' className="text-[#0EA5E9]">sign up</Link> </p>
                             </div>
                         </form>
                     </div>

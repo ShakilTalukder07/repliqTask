@@ -14,20 +14,20 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
 
-    // console.log(products,"product");
-
     if (loading) {
         return <Spinner></Spinner>
     }
 
     return (
-        <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
-            {
-                products.map(product => <Product
-                key={product._id}
-                product={product}
-                ></Product> )
-            }
+        <div>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
+                {
+                    products.map(product => <Product
+                        key={product._id}
+                        product={product}
+                    ></Product>)
+                }
+            </div>
         </div>
     );
 };

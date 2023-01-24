@@ -142,7 +142,7 @@ const Signup = () => {
                             <button onClick={handleGoogle} type="submit" className="btn w-full mt-2 border text-gray-800 bg-gray-50 border-sky-500 hover:bg-white">Sign In with <FcGoogle className="ml-4 text-2xl"></FcGoogle></button>
                         </form>
                         <div>
-                            <p className="text-sm pt-4 capitalize text-center">Already have an account? <Link href='/login' className="text-[#0EA5E9] ">Login</Link> </p>
+                            <p className="text-sm pt-4 capitalize text-center">Already have an account? <Link to='/login' className="text-[#0EA5E9] ">Login</Link> </p>
                         </div>
                     </div>
                 </div>

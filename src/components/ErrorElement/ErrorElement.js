@@ -11,7 +11,7 @@ const ErrorElement = () => {
                             <img src="https://i.ibb.co/fFsZJwK/98488-bot-error-404.gif" alt="" />
                         </h2>
 
-                        <Link href="/" className="px-8 py-3 font-semibold rounded bg-sky-400 text-gray-100">Back to homepage</Link>
+                        <Link to="/" className="px-8 py-3 font-semibold rounded bg-sky-400 text-gray-100">Back to homepage</Link>
                     </div>
                 </div>
             </section>
