@@ -1,0 +1,74 @@
+[
+    {
+        "category_name": "audi",
+        "name": "Audi-Q-7",
+        "image": "https://i.ibb.co/BT2797M/daniel-salcius-RRc-Ycd-GY630-unsplash.jpg",
+        "location": "Uttara, sector-7",
+        "price": 30500,
+        "seller_name": "Alex",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "audi",
+        "name": "Audi-8",
+        "image": "https://i.ibb.co/q0RRZMj/xiong-yan-hs8ckhd-PBkk-unsplash.jpg",
+        "location": "Gulshan read-2",
+        "price": 30500,
+        "seller_name": "John",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "audi",
+        "name": "Audi-R-1",
+        "image": "https://i.ibb.co/8zjwdPn/saif71-com-Tf-Bo-Pu-Nw-W2w-unsplash.jpg",
+        "location": "Uttara, sector-2",
+        "price": 30500,
+        "seller_name": "Morgan",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "bmw",
+        "name": "BMW-R-1",
+        "image": "https://i.ibb.co/WkS0YH0/valerie-elash-gs-Kd-Pc-Iye-Gg-unsplash.jpg",
+        "location": "Uttara, sector-2",
+        "price": 30500,
+        "seller_name": "Max",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "bmw",
+        "name": "BMW-i8",
+        "image": "https://i.ibb.co/xDKhFf1/howard-bouchevereau-BRDO4-C-0h-s-unsplash.jpg",
+        "location": "Uttara, sector-2",
+        "price": 30500,
+        "seller_name": "Picaso",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "bmw",
+        "name": "BMW-R",
+        "image": "https://i.ibb.co/tKjsTZn/harpal-singh-Kuv-EVL7l-XYQ-unsplash.jpg",
+        "location": "Uttara, sector-2",
+        "price": 30500,
+        "seller_name": "Jemima",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "tesla",
+        "name": "Tesla-R",
+        "image": "https://i.ibb.co/S3MHx17/tesla1.jpg",
+        "location": "Uttara, sector-6",
+        "price": 30500,
+        "seller_name": "Shams",
+        "contact_number": 1234567890
+    },
+    {
+        "category_name": "tesla",
+        "name": "Tesla-vamos",
+        "image": "https://i.ibb.co/XFZTCDd/nikhil-uttam-Qr-Odhs-MAQw8-unsplash.jpg",
+        "location": "Banani, road-2",
+        "price": 30500,
+        "seller_name": "Omor",
+        "contact_number": 1234567890
+    }
+]
