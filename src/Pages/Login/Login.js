@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEnvelope, FaEye } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
-
+// import firebase from 'firebase/compat/app'
+// import * as firebaseui from 'firebase'
+// import 'firebaseui/dist/firebase.css'
 
 
 const Login = () => {
@@ -32,9 +34,9 @@ const Login = () => {
                 const userInfo = {
                     name: result.user.displayName,
                     email: result.user.email,
-                    role: 'buyer'
+                    role: 'customer'
                 }
-                fetch('https://resala-server.vercel.app/users', {
+                fetch('http://localhost:5000/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -50,19 +52,19 @@ const Login = () => {
 
     const handleLogin = (data) => {
         console.log(data);
-        setLoginError('');
         signIn(data.email, data.password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setLoginUserEmail(data.email);
-            })
-            .catch(error => setLoginError(error.message))
+        .then( result =>{
+            const user = result.user;
+            console.log(user);
+            setLoginUserEmail(data.email)
+        })
+        .catch(error => setLoginError(error.message))
     }
     //show password 
     const togglePassVisibility = () => {
         setPShow(!pShow)
     }
+   
 
     return (
         <div className="">
@@ -85,7 +87,7 @@ const Login = () => {
                             <button type="submit" className="btn bg-[#0EA5E9] border-none hover:bg-[#0EA5E9]">Login</button>
                             <button onClick={handleGoogle} type="submit" className="btn  border text-gray-800 bg-gray-50 border-sky-500 hover:bg-white">Sign In with <FcGoogle className="ml-4 text-2xl"></FcGoogle></button>
                             <div>
-                                <p className="text-sm capitalize text-center">new to eventMart? <Link to='/signup' className="text-[#0EA5E9]">sign up</Link> </p>
+                                <p className="text-sm capitalize text-center">new to Repliq? <Link to='/signup' className="text-[#0EA5E9]">sign up</Link> </p>
                             </div>
                         </form>
                     </div>

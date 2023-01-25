@@ -4,10 +4,14 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import ErrorElement from "../components/ErrorElement/ErrorElement";
-import Dashboard from "../Pages/Dashboard/Dashboard";
 import Cart from "../Pages/Cart/Cart";
 import ProductDetails from "../Pages/Home/Products/ProductDetails";
 import Checkout from "../Pages/Home/Products/Checkout";
+import AllProducts from "../Pages/Dashboard/AllProducts";
+import DashboardLayout from "../Layout/DashboardLayout";
+import AllCustomers from "../Pages/Dashboard/AllCustomers";
+import AddACustomer from "../Pages/Dashboard/AddACustomer";
+import AddAProduct from "../Pages/Dashboard/AddAProduct";
 
 const router = createBrowserRouter([
     {
@@ -29,10 +33,7 @@ const router = createBrowserRouter([
                 element: <Checkout></Checkout>,
                 loader: ({ params }) => fetch(`http://localhost:5000/checkout/${params.id}`)
             },
-            {
-                path: '/dashboard',
-                element: <Dashboard></Dashboard>
-            },
+            
             {
                 path: '/cart',
                 element: <Cart></Cart>
@@ -46,7 +47,34 @@ const router = createBrowserRouter([
                 element: <Signup></Signup>
             }
         ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: '/dashboard',
+                element:<AllCustomers></AllCustomers>
+            },
+            {
+                path: '/dashboard/allProducts',
+                element: <AllProducts></AllProducts>
+            },
+            {
+                path:"/dashboard/allCustomers",
+                element:<AllCustomers></AllCustomers>
+            },
+            {
+                path:"/dashboard/addACustomer",
+                element:<AddACustomer></AddACustomer>
+            },
+            {
+                path:"/dashboard/addAProduct",
+                element:<AddAProduct></AddAProduct>
+            }
+        ]
     }
+    
 ])
 
 export default router;

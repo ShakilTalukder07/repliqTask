@@ -17,11 +17,11 @@ const Cart = () => {
         setDeletingProduct(null)
     }
 
-    console.log(orders);
+    // console.log(orders);
 
     return (
         <div>
-        <h3 className="text-3xl font-bold m-4">You have: {orders?.length} products</h3>
+        <h3 className="text-3xl font-bold m-4">You have: {orders?.length} orders</h3>
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
                 <thead>
@@ -41,7 +41,6 @@ const Cart = () => {
                             <td>
                                 {order.serviceName}
                             </td>
-                            {/* <td>${order.name}</td> */}
                             <td>${order.price}</td>
                             <td>{order.description}</td>
                         </tr>)

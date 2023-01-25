@@ -10,7 +10,7 @@ const Checkout = () => {
 
     // console.log(user);
 
-    const { image, name, seller_name, price } = items
+    const { image, name, price } = items
 
     if (loading) {
         return <Spinner></Spinner>

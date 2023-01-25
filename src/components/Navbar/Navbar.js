@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../Pages/Home/Banner/Banner.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useState(AuthContext)
+    const navigate = useNavigate()
+
+    console.log(user,"hello,");
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+        navigate('/')
+            .catch(error => console.error(error))
+    }
 
     const menuItems = <>
         <li><Link to='/dashboard'>Dashboard</Link></li>
         <li><Link to='/cart'>Cart</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+        {
+            user?.uid ?
+                <>
+                    <li><button onClick={handleLogOut}>Sign Out</button></li>
+                </> :
+                <li><Link to="/login">Login</Link></li>
+        }
     </>
 
     return (
