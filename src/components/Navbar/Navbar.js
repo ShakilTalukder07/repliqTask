@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import '../../Pages/Home/Banner/Banner.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const Navbar = () => {
 
-    const { user, logOut } = useState(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const navigate = useNavigate()
 
     console.log(user,"hello,");

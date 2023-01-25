@@ -30,7 +30,7 @@ const AddAProduct = () => {
                         number: data.number,
                         image: imgData.data.url
                     }
-
+                    console.log(products);
                     // save product information to database
                     fetch('http://localhost:5000/products', {
                         method: "POST",
@@ -50,7 +50,7 @@ const AddAProduct = () => {
             })
     }
 
-    if(isLoading){
+    if (isLoading) {
         return <Spinner></Spinner>
     }
 

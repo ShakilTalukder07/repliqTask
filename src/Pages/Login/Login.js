@@ -26,6 +26,11 @@ const Login = () => {
     //     navigate(from, { replace: true });
     // }
 
+    //show password 
+    const togglePassVisibility = () => {
+        setPShow(!pShow)
+    }
+
 
     const handleGoogle = () => {
         setLoginError("");
@@ -36,7 +41,7 @@ const Login = () => {
                     email: result.user.email,
                     role: 'customer'
                 }
-                fetch('http://localhost:5000/users', {
+                fetch('http://localhost:5000/customers', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -52,19 +57,15 @@ const Login = () => {
 
     const handleLogin = (data) => {
         console.log(data);
+        setLoginError('');
         signIn(data.email, data.password)
-        .then( result =>{
-            const user = result.user;
-            console.log(user);
-            setLoginUserEmail(data.email)
-        })
-        .catch(error => setLoginError(error.message))
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setLoginUserEmail(data.email);
+            })
+            .catch(error => setLoginError(error.message))
     }
-    //show password 
-    const togglePassVisibility = () => {
-        setPShow(!pShow)
-    }
-   
 
     return (
         <div className="">

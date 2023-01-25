@@ -50,7 +50,7 @@ const Signup = () => {
                     email: result.user.email,
                     role: 'customer'
                 }
-                fetch('http://localhost:5000/users', {
+                fetch('http://localhost:5000/customers', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -67,8 +67,8 @@ const Signup = () => {
 
     const handleSignUp = data => {
         console.log(data);
-        // setSignUpError('');
-        createUser(data.email, data.password, data.role="customer")
+        setSignUpError('');
+        createUser(data.email, data.password, data.role = "customer")
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -78,7 +78,7 @@ const Signup = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email, data.role="customer")
+                        saveUser(data.name, data.email, data.role = "customer")
                     })
                     .catch(error => console.error(error))
             })
@@ -87,18 +87,18 @@ const Signup = () => {
 
     const saveUser = (name, email, role) => {
         const userData = { name, email, role }
-        console.log(userData);
-        // fetch('http://localhost:5000/users', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(userData)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         setCreateUserEmail(email);
-        //     })
+        // console.log(userData);
+        fetch('http://localhost:5000/customers', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreateUserEmail(email);
+            })
     }
 
     return (
