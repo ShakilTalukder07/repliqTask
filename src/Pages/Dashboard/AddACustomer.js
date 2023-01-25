@@ -43,9 +43,9 @@ const AddACustomer = () => {
                 <h2 className='text-2xl m-4 text-center font-bold '>Add A New Customer</h2>
                 <form onSubmit={handleSubmit(handleAddProduct)}>
 
-
                     <div div className="form-control w-full max-w-xs" >
-                        <label className="label"> <span className="label-text">Customer Name</span></label>
+                        <label className="label"> <span className="label-text">Customer Name</span>
+                        </label>
                         <input {...register("name", {
                             required: 'category is required',
                         })} className="input input-bordered w-full max-w-xs" type="text" />
@@ -53,7 +53,8 @@ const AddACustomer = () => {
                     </div>
 
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Customer Email</span></label>
+                        <label className="label"> <span className="label-text">Customer Email</span>
+                        </label>
                         <input {...register("email", {
                             required: 'email is required',
                         })} className="input input-bordered w-full max-w-xs" type="text" />
