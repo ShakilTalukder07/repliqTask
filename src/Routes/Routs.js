@@ -12,6 +12,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import AllCustomers from "../Pages/Dashboard/AllCustomers";
 import AddACustomer from "../Pages/Dashboard/AddACustomer";
 import AddAProduct from "../Pages/Dashboard/AddAProduct";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
     {
@@ -54,23 +55,23 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element:<AllCustomers></AllCustomers>
+                element:<AdminRoute><AllCustomers></AllCustomers></AdminRoute>
             },
             {
                 path: '/dashboard/allProducts',
-                element: <AllProducts></AllProducts>
+                element: <AdminRoute><AllProducts></AllProducts></AdminRoute>
             },
             {
                 path:"/dashboard/allCustomers",
-                element:<AllCustomers></AllCustomers>
+                element:<AdminRoute><AllCustomers></AllCustomers></AdminRoute>
             },
             {
                 path:"/dashboard/addACustomer",
-                element:<AddACustomer></AddACustomer>
+                element:<AdminRoute><AddACustomer></AddACustomer></AdminRoute>
             },
             {
                 path:"/dashboard/addAProduct",
-                element:<AddAProduct></AddAProduct>
+                element:<AdminRoute><AddAProduct></AddAProduct></AdminRoute>
             }
         ]
     }

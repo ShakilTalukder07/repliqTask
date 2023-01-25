@@ -13,7 +13,7 @@ const AllCustomers = () => {
         .then( data => setCustomers(data))
     },[])
 
-    console.log(customers);
+    // console.log(customers);
 
     if(loading){
         return <Spinner></Spinner>

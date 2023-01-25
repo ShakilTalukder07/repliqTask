@@ -2,14 +2,21 @@ import React, { useContext } from 'react';
 import '../../Pages/Home/Banner/Banner.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import useAdmin from '../hooks/useAdmin';
+import Spinner from '../Spinner/Spinner';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
+    const [isAdmin, isAdminLoading] = useAdmin(user?.email)
+
     const navigate = useNavigate()
 
-    console.log(user,"hello,");
+    // console.log(user);
 
+    if (isAdminLoading) {
+        return <Spinner></Spinner>
+    }
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -18,7 +25,14 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+
+        {
+            isAdmin === 'admin' &&
+            <>
+                <li><Link to='/dashboard'>Dashboard</Link></li>
+            </>
+        }
+
         <li><Link to='/cart'>Cart</Link></li>
         {
             user?.uid ?
@@ -49,7 +63,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
+                    <Link className="avatar bg-sky-400 rounded-full h-10 w-14">{user?.displayName}</Link>
                 </div>
             </div>
         </div>
