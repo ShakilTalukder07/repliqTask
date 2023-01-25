@@ -41,7 +41,7 @@ const Login = () => {
                     email: result.user.email,
                     role: 'customer'
                 }
-                fetch('http://localhost:5000/customers', {
+                fetch('https://repliq-server-one.vercel.app/customers', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

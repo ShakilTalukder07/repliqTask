@@ -22,7 +22,7 @@ const ProductDetails = () => {
                 <p>Seller: {seller_name}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions justify-end">
-                    <Link className="btn btn-accent">Add to cart</Link>
+                    {/* <Link className="btn btn-accent">Add to cart</Link> */}
                 </div>
             </div>
         </div>

@@ -27,14 +27,14 @@ const router = createBrowserRouter([
             {
                 path: '/products/:id',
                 element: <ProductDetails></ProductDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://repliq-server-one.vercel.app/products/${params.id}`)
             },
             {
                 path: '/checkout/:id',
                 element: <Checkout></Checkout>,
-                loader: ({ params }) => fetch(`http://localhost:5000/checkout/${params.id}`)
+                loader: ({ params }) => fetch(`https://repliq-server-one.vercel.app/checkout/${params.id}`)
             },
-            
+
             {
                 path: '/cart',
                 element: <Cart></Cart>
@@ -55,27 +55,27 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element:<AdminRoute><AllCustomers></AllCustomers></AdminRoute>
+                element: <AdminRoute><AllCustomers></AllCustomers></AdminRoute>
             },
             {
                 path: '/dashboard/allProducts',
                 element: <AdminRoute><AllProducts></AllProducts></AdminRoute>
             },
             {
-                path:"/dashboard/allCustomers",
-                element:<AdminRoute><AllCustomers></AllCustomers></AdminRoute>
+                path: "/dashboard/allCustomers",
+                element: <AdminRoute><AllCustomers></AllCustomers></AdminRoute>
             },
             {
-                path:"/dashboard/addACustomer",
-                element:<AdminRoute><AddACustomer></AddACustomer></AdminRoute>
+                path: "/dashboard/addACustomer",
+                element: <AdminRoute><AddACustomer></AddACustomer></AdminRoute>
             },
             {
-                path:"/dashboard/addAProduct",
-                element:<AdminRoute><AddAProduct></AddAProduct></AdminRoute>
+                path: "/dashboard/addAProduct",
+                element: <AdminRoute><AddAProduct></AddAProduct></AdminRoute>
             }
         ]
     }
-    
+
 ])
 
 export default router;

@@ -9,14 +9,13 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
     const [isAdmin, isAdminLoading] = useAdmin(user?.email)
-
     const navigate = useNavigate()
 
     // console.log(user);
 
-    if (isAdminLoading) {
-        return <Spinner></Spinner>
-    }
+    // if (isAdminLoading) {
+    //     return <Spinner></Spinner>
+    // }
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -25,14 +24,13 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-
+        <li><Link to='/'>Home</Link></li>
         {
             isAdmin === 'admin' &&
             <>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
             </>
         }
-
         <li><Link to='/cart'>Cart</Link></li>
         {
             user?.uid ?

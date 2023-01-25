@@ -33,7 +33,7 @@ const Checkout = () => {
             description
         }
 
-        fetch('http://localhost:5000/orders/', {
+        fetch('https://repliq-server-one.vercel.app/orders/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

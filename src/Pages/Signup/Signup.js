@@ -50,7 +50,7 @@ const Signup = () => {
                     email: result.user.email,
                     role: 'customer'
                 }
-                fetch('http://localhost:5000/customers', {
+                fetch('https://repliq-server-one.vercel.app/customers', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -88,7 +88,7 @@ const Signup = () => {
     const saveUser = (name, email, role) => {
         const userData = { name, email, role }
         // console.log(userData);
-        fetch('http://localhost:5000/customers', {
+        fetch('https://repliq-server-one.vercel.app/customers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

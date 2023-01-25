@@ -35,14 +35,14 @@ const Banner = () => {
                     </Swiper>
 
                 </div>
-                <div className='w-1/3'>
+                <div className='w-1/3 ml-2'>
                     <h1 className="text-4xl font-bold text-white">Welcome to Bangladesh’s largest <br /> E-Market.</h1>
                     <div className="py-6 text-white">
                         <p>We sale various types of products. Best in look also affordable in price. You may get your desire car with an affordable price</p>
                     </div>
                     <div className='flex my-10 gap-4'>
-                        <Link to='' className="btn btn-ghost bg-green-300 m-2">Start Buying</Link>
-                        <Link to='' className="btn btn-ghost bg-blue-400 m-2">Start Selling</Link>
+                        <Link to='' className="btn btn-ghost bg-green-300 m-2">Let's Buy</Link>
+                        <Link to='' className="btn btn-ghost bg-blue-400 m-2">Let's Buy</Link>
                     </div>
                 </div>
             </div>

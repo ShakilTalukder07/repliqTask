@@ -32,7 +32,7 @@ const AddAProduct = () => {
                     }
                     console.log(products);
                     // save product information to database
-                    fetch('http://localhost:5000/products', {
+                    fetch('https://repliq-server-one.vercel.app/products', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',
