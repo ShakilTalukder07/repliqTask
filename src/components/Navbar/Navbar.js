@@ -31,10 +31,10 @@ const Navbar = () => {
                 <li><Link to='/dashboard'>Dashboard</Link></li>
             </>
         }
-        <li><Link to='/cart'>Cart</Link></li>
         {
             user?.uid ?
                 <>
+                    <li><Link to='/cart'>Cart</Link></li>
                     <li><button onClick={handleLogOut}>Sign Out</button></li>
                 </> :
                 <li><Link to="/login">Login</Link></li>
